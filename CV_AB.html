@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arif Billah - Resume</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Rubik:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: rgb(0, 140, 255);
+            --text-color: rgb(0, 0, 0);
+            --bg-light: #f9f9f9;
+            --border-color: #e4e4e4;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background-color: #e9e9e9;
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            width: 100%;
+            max-width: 850px;
+            /* A4 width approximation */
+            background-color: #ffffff;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        .header-info {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .name {
+            font-family: 'Rubik', sans-serif;
+            font-size: 38px;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1.1;
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 19px;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-item i {
+            color: var(--primary-color);
+            font-size: 12px;
+        }
+
+        .photo {
+            width: 135px;
+            height: 135px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            font-family: 'Rubik', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Main Layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 40%;
+            column-gap: 25px;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Rubik', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--text-color);
+            border-bottom: 3px solid var(--text-color);
+            padding-bottom: 3px;
+            margin-bottom: 15px;
+        }
+
+        /* Summary */
+        .summary-text {
+            font-size: 13px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        /* Experience & Education Items */
+        .item {
+            margin-bottom: 16px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .position {
+            font-family: 'Rubik', sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .company {
+            font-size: 15px;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+        }
+
+        .date-location {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 6px;
+        }
+
+        .date-location i {
+            margin-right: 4px;
+            color: var(--primary-color);
+        }
+
+        .item-desc {
+            font-size: 13px;
+            line-height: 1.4;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .bullets {
+            list-style-type: none;
+        }
+
+        .bullets li {
+            font-size: 13px;
+            line-height: 1.4;
+            padding-left: 15px;
+            position: relative;
+            margin-bottom: 3px;
+        }
+
+        .bullets li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--text-color);
+        }
+
+        /* Right Column Items (Strengths, Achievements) */
+        .right-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .right-item-icon {
+            width: 27px;
+            height: 27px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+
+        .right-item-content {
+            flex: 1;
+        }
+
+        .right-item-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-color);
+            margin-bottom: 3px;
+        }
+
+        .right-item-desc {
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        /* Languages */
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .lang-name {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .lang-level {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .dots {
+            display: flex;
+            gap: 5px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #e4e4e4;
+        }
+
+        .dot.active {
+            background-color: var(--primary-color);
+        }
+
+        /* Skills Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .photo {
+                margin-bottom: 15px;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-info">
+                <h1 class="name">Arif Billah</h1>
+                <div class="title">IT Professional | Web Developer | IT Support Specialist</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+88 01844 838723</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>arifbillah2543@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Uttara, Dhaka-1230, Bangladesh</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo">AB</div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Summary -->
+                <section class="section">
+                    <h2 class="section-title">Summary</h2>
+                    <p class="summary-text">
+                        I am a results-driven IT Professional with hands-on experience in IT support, web development,
+                        and administrative operations. I seek to leverage my expertise in Next.js, Tailwind CSS, and
+                        data management to deliver value and contribute to organizational growth. My background includes
+                        managing IT infrastructure, delivering training programs, and overseeing construction projects.
+                    </p>
+                </section>
+
+                <!-- Experience -->
+                <section class="section">
+                    <h2 class="section-title">Experience</h2>
+
+                    <div class="item">
+                        <div class="position">IT Officer</div>
+                        <div class="company">Darul Azhar Model Madrasah</div>
+                        <div class="date-location">
+                            <span><i class="far fa-calendar-alt"></i> 01/2023 - Present</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                        </div>
+                        <p class="item-desc">Educational institution providing various levels of learning</p>
+                        <ul class="bullets">
+                            <li>Manage and maintain IT infrastructure, hardware, and software systems</li>
+                            <li>Provide technical support and training to staff on computer applications</li>
+                            <li>Oversee digital data management, administrative documentation, and online platforms</li>
+                        </ul>
+                    </div>
+
+                    <div class="item">
+                        <div class="position">Trainer - Computer Applications</div>
+                        <div class="company">Mizan Computer Training Academy</div>
+                        <div class="date-location">
+                            <span><i class="far fa-calendar-alt"></i> 01/2022 - 12/2022</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                        </div>
+                        <p class="item-desc">Training academy for computer applications</p>
+                        <ul class="bullets">
+                            <li>Designed and delivered training programs on Microsoft Office and computer fundamentals
+                            </li>
+                            <li>Mentored students in practical computer skills and office applications</li>
+                        </ul>
+                    </div>
+
+                    <div class="item">
+                        <div class="position">Computer Operator</div>
+                        <div class="company">Bhai-Bhai Computers</div>
+                        <div class="date-location">
+                            <span><i class="far fa-calendar-alt"></i> 01/2021 - 12/2021</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                        </div>
+                        <p class="item-desc">Computer services and solutions provider</p>
+                        <ul class="bullets">
+                            <li>Handled data entry, document processing, and digital file management</li>
+                            <li>Assisted clients with printing, scanning, and IT-related services</li>
+                        </ul>
+                    </div>
+
+                    <div class="item">
+                        <div class="position">Project Manager (Construction)</div>
+                        <div class="company">Star Cineplex</div>
+                        <div class="date-location">
+                            <span><i class="far fa-calendar-alt"></i> 01/2020 - 12/2020</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                        </div>
+                        <p class="item-desc">Multi-cinema company in Bangladesh</p>
+                        <ul class="bullets">
+                            <li>Oversaw planning and execution of new building construction project</li>
+                            <li>Coordinated with contractors, vendors, and stakeholders to ensure timely delivery</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="section">
+                    <h2 class="section-title">Education</h2>
+
+                    <div class="item">
+                        <div class="item-header">
+                            <div>
+                                <div class="position">Higher Secondary Certificate (HSC)</div>
+                                <div class="company">Aman Ullah College</div>
+                                <div class="date-location">
+                                    <span><i class="far fa-calendar-alt"></i> 01/2022 - 01/2024</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Barishal Board</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-header">
+                            <div>
+                                <div class="position">Secondary School Certificate (SSC)</div>
+                                <div class="company">Mafsar Ul-Ulum Alim Madrasah</div>
+                                <div class="date-location">
+                                    <span><i class="far fa-calendar-alt"></i> 01/2019 - 01/2022</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Madrasah Board</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Certifications -->
+                <section class="section">
+                    <h2 class="section-title">Certifications</h2>
+
+                    <div class="item">
+                        <div class="position" style="font-size: 15px;">Computer Office Application</div>
+                        <p class="item-desc">6-month training focused on Computer Office Applications</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="position" style="font-size: 15px;">Modern Web Development</div>
+                        <p class="item-desc">Course covering Modern Web Development using Next.js and Tailwind CSS</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Strengths -->
+                <section class="section">
+                    <h2 class="section-title">Strengths</h2>
+
+                    <div class="right-item">
+                        <div class="right-item-icon"><i class="fas fa-magic"></i></div>
+                        <div class="right-item-content">
+                            <div class="right-item-title">IT Support</div>
+                            <div class="right-item-desc">Ability to provide IT support and technical assistance
+                                effectively</div>
+                        </div>
+                    </div>
+
+                    <div class="right-item">
+                        <div class="right-item-icon"><i class="fas fa-star"></i></div>
+                        <div class="right-item-content">
+                            <div class="right-item-title">Project Management</div>
+                            <div class="right-item-desc">Proven skills in team leadership and project management</div>
+                        </div>
+                    </div>
+
+                    <div class="right-item">
+                        <div class="right-item-icon"><i class="fas fa-star-half-alt"></i></div>
+                        <div class="right-item-content">
+                            <div class="right-item-title">Communication</div>
+                            <div class="right-item-desc">Strong communication and presentation skills</div>
+                        </div>
+                    </div>
+
+                    <div class="right-item">
+                        <div class="right-item-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="right-item-content">
+                            <div class="right-item-title">Customer Service</div>
+                            <div class="right-item-desc">Customer service and stakeholder coordination expertise</div>
+                        </div>
+                    </div>
+
+                    <div class="right-item">
+                        <div class="right-item-icon"><i class="fas fa-brain"></i></div>
+                        <div class="right-item-content">
+                            <div class="right-item-title">Organization</div>
+                            <div class="right-item-desc">Excellent organizational and time management capabilities</div>
+                        </div>
+                    </div>
+
+                    <div class="right-item">
+                        <div class="right-item-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="right-item-content">
+                            <div class="right-item-title">Pressure Management</div>
+                            <div class="right-item-desc">Ability to work under pressure in a fast-paced environment
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Key Achievements -->
+                <section class="section">
+                    <h2 class="section-title">Key Achievements</h2>
+
+                    <div class="right-item">
+                        <div class="right-item-icon"><i class="fas fa-heart"></i></div>
+                        <div class="right-item-content">
+                            <div class="right-item-title">Training Impact at Mizan Computer Training Academy</div>
+                            <div class="right-item-desc">Successfully delivered comprehensive training programs that
+                                improved student computer skills</div>
+                        </div>
+                    </div>
+
+                    <div class="right-item">
+                        <div class="right-item-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="right-item-content">
+                            <div class="right-item-title">IT Management at Darul Azhar Model Madrasah</div>
+                            <div class="right-item-desc">Managed IT services and infrastructure at a respected
+                                educational institution</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Languages -->
+                <section class="section">
+                    <h2 class="section-title">Languages</h2>
+
+                    <div class="language-item">
+                        <div>
+                            <div class="lang-name">English</div>
+                            <div class="lang-level">Proficient</div>
+                        </div>
+                        <div class="dots">
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+
+                    <div class="language-item">
+                        <div>
+                            <div class="lang-name">Bengali</div>
+                            <div class="lang-level">Native</div>
+                        </div>
+                        <div class="dots">
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="section">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skills-container">
+                        <span class="skill-tag">Gmail</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Tailwind</span>
+                        <span class="skill-tag">Microsoft Office</span>
+                        <span class="skill-tag">Training Programs</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">Microsoft Word</span>
+                        <span class="skill-tag">Microsoft Power Point</span>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
