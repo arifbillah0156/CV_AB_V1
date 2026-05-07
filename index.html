@@ -43,6 +43,7 @@
             background-color: #ffffff;
             padding: 40px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
         /* Header Section */
@@ -71,7 +72,7 @@
 
         .title {
             font-family: 'Rubik', sans-serif;
-            font-size: 19px;
+            font-size: 18px;
             font-weight: 500;
             color: var(--primary-color);
             margin-bottom: 12px;
@@ -83,6 +84,7 @@
             gap: 15px;
             font-size: 12px;
             line-height: 15px;
+
         }
 
         .contact-item {
@@ -93,22 +95,28 @@
 
         .contact-item i {
             color: var(--primary-color);
-            font-size: 12px;
+            font-size: 14px;
+        }
+
+        .contact-item a {
+            color: black;
+            font-size: 14px;
+            text-decoration: none;
         }
 
         .photo {
-            width: 135px;
-            height: 135px;
-            background-color: var(--primary-color);
+            width: 150px;
+            height: 200px;
+            overflow: hidden;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-color);
-            font-family: 'Rubik', sans-serif;
-            font-size: 48px;
-            font-weight: 700;
             flex-shrink: 0;
+            margin-top: -70px;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* Main Layout */
@@ -135,7 +143,7 @@
 
         /* Summary */
         .summary-text {
-            font-size: 13px;
+            font-size: 14px;
             line-height: 1.5;
             text-align: justify;
         }
@@ -288,6 +296,14 @@
 
         /* Responsive Design for Mobile */
         @media (max-width: 768px) {
+            .name {
+                font-size: 34px;
+            }
+
+            .title {
+                font-size: 14px;
+            }
+
             .main-content {
                 grid-template-columns: 1fr;
             }
@@ -316,14 +332,14 @@
             <div class="header-info">
                 <h1 class="name">Arif Billah</h1>
                 <div class="title">IT Professional | Web Developer | IT Support Specialist</div>
-                <div class="contact-info">
+                <div class="contact-info" style="font-size: 14px;">
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>+88 01844 838723</span>
+                        <a href="tel:+8801844838723">+88 01844 838723</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>arifbillah2543@gmail.com</span>
+                        <a href="mailto:arifbillah2543@gmail.com">arifbillah2543@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -331,7 +347,9 @@
                     </div>
                 </div>
             </div>
-            <div class="photo">AB</div>
+            <div class="photo">
+                <img src="./Arif Billah.jpg" alt="Arif Billah">
+            </div>
         </header>
 
         <!-- Main Content -->
@@ -343,10 +361,9 @@
                 <section class="section">
                     <h2 class="section-title">Summary</h2>
                     <p class="summary-text">
-                        I am a results-driven IT Professional with hands-on experience in IT support, web development,
-                        and administrative operations. I seek to leverage my expertise in Next.js, Tailwind CSS, and
-                        data management to deliver value and contribute to organizational growth. My background includes
-                        managing IT infrastructure, delivering training programs, and overseeing construction projects.
+                        I am seeking a challenging position where I can utilize my adaptability, problem-solving
+                        abilities, and technical skills to contribute effectively to the organization. My goal is to
+                        innovate, expand my knowledge, and grow professionally while delivering measurable value.
                     </p>
                 </section>
 
@@ -356,9 +373,10 @@
 
                     <div class="item">
                         <div class="position">IT Officer</div>
-                        <div class="company">Darul Azhar Model Madrasah</div>
+                        <a href="http://darulazharbd.com" target="_blank" rel="noopener noreferrer" class="company"
+                            style="text-decoration: none;">Darul Azhar Model Madrasah (Main Campus)</a>
                         <div class="date-location">
-                            <span><i class="far fa-calendar-alt"></i> 01/2023 - Present</span>
+                            <span><i class="far fa-calendar-alt"></i> 01/07/2025 - Present</span>
                             <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
                         </div>
                         <p class="item-desc">Educational institution providing various levels of learning</p>
@@ -370,25 +388,10 @@
                     </div>
 
                     <div class="item">
-                        <div class="position">Trainer - Computer Applications</div>
-                        <div class="company">Mizan Computer Training Academy</div>
-                        <div class="date-location">
-                            <span><i class="far fa-calendar-alt"></i> 01/2022 - 12/2022</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
-                        </div>
-                        <p class="item-desc">Training academy for computer applications</p>
-                        <ul class="bullets">
-                            <li>Designed and delivered training programs on Microsoft Office and computer fundamentals
-                            </li>
-                            <li>Mentored students in practical computer skills and office applications</li>
-                        </ul>
-                    </div>
-
-                    <div class="item">
                         <div class="position">Computer Operator</div>
                         <div class="company">Bhai-Bhai Computers</div>
                         <div class="date-location">
-                            <span><i class="far fa-calendar-alt"></i> 01/2021 - 12/2021</span>
+                            <span><i class="far fa-calendar-alt"></i> 01/10/2024 - 30/06/2025</span>
                             <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
                         </div>
                         <p class="item-desc">Computer services and solutions provider</p>
@@ -402,7 +405,7 @@
                         <div class="position">Project Manager (Construction)</div>
                         <div class="company">Star Cineplex</div>
                         <div class="date-location">
-                            <span><i class="far fa-calendar-alt"></i> 01/2020 - 12/2020</span>
+                            <span><i class="far fa-calendar-alt"></i> 01/10/2024 - 15/02/2025</span>
                             <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
                         </div>
                         <p class="item-desc">Multi-cinema company in Bangladesh</p>
@@ -411,6 +414,22 @@
                             <li>Coordinated with contractors, vendors, and stakeholders to ensure timely delivery</li>
                         </ul>
                     </div>
+
+                    <div class="item">
+                        <div class="position">Trainer - Computer Applications</div>
+                        <div class="company">Mizan Computer Training Academy</div>
+                        <div class="date-location">
+                            <span><i class="far fa-calendar-alt"></i> 01/03/2022 - 30/04/2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Barisal, Bangladesh</span>
+                        </div>
+                        <p class="item-desc">Training academy for computer applications</p>
+                        <ul class="bullets">
+                            <li>Designed and delivered training programs on Microsoft Office and computer fundamentals
+                            </li>
+                            <li>Mentored students in practical computer skills and office applications</li>
+                        </ul>
+                    </div>
+
                 </section>
 
                 <!-- Education -->
@@ -455,7 +474,8 @@
 
                     <div class="item">
                         <div class="position" style="font-size: 15px;">Modern Web Development</div>
-                        <p class="item-desc">Course covering Modern Web Development using Next.js and Tailwind CSS</p>
+                        <p class="item-desc">Online Course covering Modern Web Development using Next.js and Tailwind
+                            CSS</p>
                     </div>
                 </section>
             </div>
@@ -577,15 +597,16 @@
                 <section class="section">
                     <h2 class="section-title">Skills</h2>
                     <div class="skills-container">
-                        <span class="skill-tag">Gmail</span>
+                        <span class="skill-tag">Email Management</span>
+                        <span class="skill-tag">IT Support</span>
                         <span class="skill-tag">Next.js</span>
-                        <span class="skill-tag">Tailwind</span>
-                        <span class="skill-tag">Microsoft Office</span>
-                        <span class="skill-tag">Training Programs</span>
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">Microsoft Word</span>
-                        <span class="skill-tag">Microsoft Power Point</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">HTML & CSS</span>
+                        <span class="skill-tag">Microsoft Office Suite</span>
+                        <span class="skill-tag">Data Management</span>
+                        <span class="skill-tag">Training & Facilitation</span>
+                        <span class="skill-tag">Technical Troubleshooting</span>
+                        <span class="skill-tag">Web Development Basics</span>
                     </div>
                 </section>
             </div>
